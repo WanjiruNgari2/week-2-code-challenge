@@ -9,7 +9,7 @@
  
  //items added
 addItemBtn.addEventListener('click', () => {
-  let newItemText = itemInput.value;
+  let newItemText = itemInput.value};
 
   
   
@@ -44,10 +44,9 @@ function addProduct (newItemText) {
 
 
 //clear the list
-clearItemBtn.addEventListener('click', () => {
+clearItemBtn.addEventListener('click'), () => {
     itemlist.value = '';
-});
-});
+}
 
 
 
