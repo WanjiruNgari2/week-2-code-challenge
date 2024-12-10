@@ -1,32 +1,28 @@
- let itemInput = document.getElementById('itemInput');
- let itemlist = document.getElementById('itemlist');
- let addItemBtn = document.getElementById('addItemBtn');
- let soldItemBtn = document.getElementById('soldItemBtn');
- let clearItemBtn = document.getElementById('clearItemBtn');
+const shoppingListContainer = document.getElementById('shoppingList');
+ const itemInput = document.getElementById('itemInput');
+ const itemlist = document.getElementById('itemlist');
+ const addItemBtn = document.getElementById('addItemBtn');
+ const soldItemBtn = document.getElementById('soldItemBtn');
+ const clearItemBtn = document.getElementById('clearItemBtn');
 
-
-
- 
- //items added
-addItemBtn.addEventListener('click', () => {
-  let newItemText = itemInput.value};
-
-  
-  
-  function childAddition (newItemList) {
-    let newItem = document.createElement('li');
-itemlist.appendChild(newItem);
-    itemInput.Value = '';
-  }
 
 
 // update shoppingList
-  let  shoppingList = [];
+let  shoppingList = [];
 function addProduct (newItemText) {
     shoppingList.push(newItemText);
     return newItemText;
 }
-  
+   
+function childAddition (newItemList) {
+  let newItem = document.createElement('li');
+itemlist.appendChild(newItem);
+  itemInput.Value = '';
+}
+
+
+//items added
+addItemBtn.addEventListener('click', addItemBtn);
 
 
 
@@ -34,7 +30,7 @@ function addProduct (newItemText) {
  soldItemBtn.addEventListener('click', () => {
     let items = itemlist.querySelectorAll('li');
     items.forEach(items => {
-        if(items.textContent === itemInput.value) {
+        if(items.textContent.toLocaleLowerCase() === itemInput.value.toLowerCase()) {
             items.style.backgroundColor = '#00FF00';
             items.style.textDecoration = 'linethrough';
         }
@@ -44,9 +40,10 @@ function addProduct (newItemText) {
 
 
 //clear the list
-clearItemBtn.addEventListener('click'), () => {
+clearItemBtn.addEventListener('click', () => {
     itemlist.value = '';
-}
+});
+
 
 
 
