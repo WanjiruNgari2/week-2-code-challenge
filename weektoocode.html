@@ -5,17 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>JavaScript Lab</title>
+  <style>
+    body { 
+      text-align:center;
+      margin: 20px;
+      cursor: pointer;
+    }
+      .container { 
+        margin: 0 auto;
+      }
+      
+      #addItem-Btn {
+background-color: brown;
+  }
+
+  #clearItem-btn {
+    background-color: blue;
+  }
+
+  #soldItem-btn {
+    background-color: chartreuse;
+  }
+
+  </style>
 </head>
 <body>
-  <input type="text" id="itemInput" placeholder = "Enter Your Item name"> <br>
-  <input type="text" id="itemInput" placeholder = "Enter Your Item name"> <br>
-  <input type="text" id="itemInput" placeholder = "Enter Your Item name"> <br>
-  <input type="text" id="itemInput" placeholder = "Enter Your Item name"> <br>
-  <input type="text" id="itemInput" placeholder = "Enter Your Item name">
-
-
+  <div class="container">
+    <h1> YOUR SHOPPING LIST</h1>
+  <input type="text" id="itemInput" placeholder = "Enter Your Item name"> 
+  <Button id = "addItemBtn"> addItem </Button> 
   <ul id= "itemlist">  </ul>
-    <Button id = "addItemBtn"> addItem </Button> 
     <button id = "soldItemBtn"> soldItem </button> 
     <button id = "clearItemBtn"> clearItem </button>  
     <script type="text/javascript" src="weektoocode.js"></script>
